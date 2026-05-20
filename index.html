@@ -4,16 +4,40 @@
     <title>game</title>
     
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        overflow: hidden;
+        overscroll-behavior: none;
+        background-color: skyblue;
+      }
+      
+      .playerContainer {
+        background-color: yellow;
+        position: fixed;
+        bottom: 5rem;
+      }
+      
+      #player {
+        background-color: red;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
   <body>
-    <h1>test</h1>
+    <h1>test1</h1>
+
+    <div class="playerContainer">
+      <div id="player"></div>
+    </div>
     
-    <div id="player"></div>
-      
     <div id="objects">
       <div id="ground"></div>
-
-        
     </div>
       
     <script src="script.js"></script>
