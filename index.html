@@ -41,8 +41,6 @@
     </style>
   </head>
   <body>
-    <h1>test1</h1>
-
     <div class="playerContainer">
       <div id="player"></div>
     </div>
@@ -52,7 +50,34 @@
     </div>
       
     <script>
-      //script here
+      const player = document.getElementById("player");
+      
+      const objectsAll = document.getElementById("objects");
+      const objects = objectsAll.children;
+
+      //hitbox check
+      function checkCollision(elA, elB) {
+        const rA = elA.getBoundingClientRect();
+        const rB = elB.getBoundingClientRect();
+
+        return (
+          rA.left < rB.right &&
+          rA.right > rB.left &&
+          rA.top < rB.bottom &&
+          rA.bottom > rB.top
+        );
+      }
+
+      const box1 = document.getElementById("box1");
+      const box2 = document.getElementById("box2");
+
+      setInterval(() => {
+        if (checkCollision(box1, box2)) {
+         alert("Collision detected");
+        }
+      })
+
+      });
     </script>
   </body>
 </html>
