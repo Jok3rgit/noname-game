@@ -48,6 +48,7 @@
     </div>
       
     <script>
+      //get elements
       const player = document.getElementById("player");
       
       const objectsAll = document.getElementById("objects");
@@ -71,14 +72,14 @@
 
       setInterval(() => {
         if (checkCollision(box1, box2)) {
-         alert("Collision detected");
+          alert("Collision detected");
         }
       });
 
       //player moves
       window.addEventListener("keydown", (event) => {
         if (event.key === "ArrowUp") {
-          alert("up");
+          
         }
 
         if (event.key === "ArrowDown") {
