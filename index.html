@@ -11,7 +11,7 @@
       body {
         overscroll-behavior: none;
         background-image: url("https://cdn.pixabay.com/photo/2023/09/09/10/25/mountains-8242910_1920__77074d93cc.png");
-        background-size: 250% auto;
+        background-size: 100% auto;
         margin: 0;
         padding: 0
       }
@@ -33,10 +33,6 @@
     <div id="player"></div>
       
     <script>
-      //get elements
-      const objectsAll = document.getElementById("objects");
-      const objects = objectsAll.children;
-
       //hitbox check
       function checkCollision(elA, elB) {
         const rA = elA.getBoundingClientRect();
@@ -50,8 +46,8 @@
         );
       }
 
-      const box1 = document.getElementById("box1");
-      const box2 = document.getElementById("box2");
+      const box1 = document.getElementById("player");
+      const box2 = document.getElementById("objects").children;
 
       setInterval(() => {
         if (checkCollision(box1, box2)) {
