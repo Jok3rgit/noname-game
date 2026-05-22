@@ -11,25 +11,9 @@
       body {
         overscroll-behavior: none;
         background-image: url("https://cdn.pixabay.com/photo/2023/09/09/10/25/mountains-8242910_1920__77074d93cc.png");
-        background-size: 500% auto;
+        background-size: 250% auto;
         margin: 0;
         padding: 0
-      }
-
-      #ground {
-        background-color: green;
-        position: absolute;
-        bottom: 2.5rem;
-        left: 0;
-        right: 0;
-      }
-      
-      .playerContainer {
-        position: fixed;
-        bottom: 0;
-        top: 0;
-        right: 0;
-        left: 0;
       }
       
       #player {
@@ -46,13 +30,7 @@
     </style>
   </head>
   <body>
-    <div class="playerContainer">
-      <div id="player"></div>
-    </div>
-    
-    <div id="objects">
-      <div id="ground"></div>
-    </div>
+    <div id="player"></div>
       
     <script>
       //get elements
@@ -84,19 +62,19 @@
       //player moves
       window.addEventListener("keydown", (event) => {
         if (event.key === "ArrowUp") {
-          document.getElementById("player").style.bottom = "60%";
+          document.getElementById("player").style.bottom += 1 + "%";
         }
 
         if (event.key === "ArrowDown") {
-          alert("down");
+          document.getElementById("player").style.top += 1 + "%";
         }
 
         if (event.key === "ArrowRight") {
-          alert("right");
+          document.getElementById("player").style.left += 1 + "%";
         }
 
         if (event.key === "ArrowLeft") {
-          alert("left");
+          document.getElementById("player").style.right += 1 + "%";
         }
       });
 
