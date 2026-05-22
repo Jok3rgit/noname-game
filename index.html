@@ -19,9 +19,9 @@
       }
       
       .playerContainer {
-        background-color: yellow;
         position: fixed;
-        bottom: 5rem;
+        bottom: 0;
+        top: 0;
         right: 0;
         left: 0;
       }
@@ -34,6 +34,7 @@
         left: 50%;
         right: 50%;
         top: 50%;
+        bottom: 50%;
         transform: translate(-50%, -50%);
       }
     </style>
@@ -79,7 +80,7 @@
       //player moves
       window.addEventListener("keydown", (event) => {
         if (event.key === "ArrowUp") {
-          
+          player.style.bottom = player.style.bottom + 1 + "%";
         }
 
         if (event.key === "ArrowDown") {
