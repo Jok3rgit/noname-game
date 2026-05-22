@@ -54,8 +54,6 @@
       
     <script>
       //get elements
-      const player = document.getElementById("player");
-      
       const objectsAll = document.getElementById("objects");
       const objects = objectsAll.children;
 
@@ -84,7 +82,7 @@
       //player moves
       window.addEventListener("keydown", (event) => {
         if (event.key === "ArrowUp") {
-          player.style.bottom = "60%";
+          document.getElementById("player").style.bottom = "60%";
         }
 
         if (event.key === "ArrowDown") {
