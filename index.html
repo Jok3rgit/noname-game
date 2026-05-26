@@ -16,8 +16,8 @@
         width: 5rem;
         height: 5rem;
         position: absolute;
-        top: 50px;
-        left: 50px;
+        top: 5rem;
+        left: 5rem;
       }
     </style>
   </head>
@@ -63,19 +63,19 @@
       window.addEventListener("keydown", (event) => {
 
       if (event.key === "ArrowUp") {
-          y -= 10;
+          y -= 5rem;
       }
 
       if (event.key === "ArrowDown") {
-          y += 10;
+          y += 5rem;
       }
 
       if (event.key === "ArrowRight") {
-          x += 10;
+          x += 5rem;
       }
 
       if (event.key === "ArrowLeft") {
-          x -= 10;
+          x -= 5rem;
       }
 
       player.style.top = y + "px";
