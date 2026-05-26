@@ -33,7 +33,7 @@
       <div id="player"></div>
 
       <div id="objects">
-        <div id="comet"></div>
+        <div name="comet" id="comet"></div>
       </div>
     </div>
       
@@ -61,7 +61,7 @@
         setInterval(() => {
           for (let obj of box2) {
             if (checkCollision(box1, obj)) {
-              alert(obj);
+              alert(obj.name);
               obj.style.display = "none";
             }
           }
