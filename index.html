@@ -60,6 +60,7 @@
           for (let obj of box2) {
             if (checkCollision(box1, obj)) {
               alert("Collision detected");
+              document.getElementById("comet").style.display = "none";
             }
           }
         }, 100);
