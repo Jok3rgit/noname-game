@@ -29,10 +29,12 @@
     </style>
   </head>
   <body>
-    <div id="player"></div>
+    <div class="">
+      <div id="player"></div>
 
-    <div id="objects">
-      <div id="comet"></div>
+      <div id="objects">
+        <div id="comet"></div>
+      </div>
     </div>
       
     <script>
@@ -59,8 +61,8 @@
         setInterval(() => {
           for (let obj of box2) {
             if (checkCollision(box1, obj)) {
-              alert("Collision detected");
-              document.getElementById("comet").style.display = "none";
+              alert(obj);
+              obj.style.display = "none";
             }
           }
         }, 100);
