@@ -23,11 +23,13 @@
       }
       
       #player {
-        background-color: red;
-        width: 5rem;
-        height: 5rem;
         position: absolute;
         z-index: 1;
+      }
+
+      #player img {
+        height: 5rem;
+        width: 5rem;
       }
 
       #comet {
@@ -45,7 +47,9 @@
   </head>
   <body>
     <div class="game-screen">
-      <div id="player"></div>
+      <div id="player">
+        <img src="https://jok3rgit.github.io/Comet-Miner/images/playership.png" />
+      </div>
 
       <div id="objects">
         <div id="comet">
