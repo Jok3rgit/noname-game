@@ -7,7 +7,6 @@
       body {
         overflow: hidden;
         background-color: rgb(0, 0, 0);
-        height: 100vh;
         margin: 0;
         padding: 0;
         display: flex;
@@ -30,11 +29,12 @@
       }
 
       #comet {
-        background-image: url("https://jok3rgit.github.io/noname-game/images/comet.png");
-        background-size: 100% auto;
-        height: 5rem;
-        width: 5rem;
         position: absolute;
+      }
+
+      #comet img {
+        height: 5rem;
+        width: 5rem; 
       }
     </style>
   </head>
@@ -43,7 +43,9 @@
       <div id="player"></div>
 
       <div id="objects">
-        <div name="comet" id="comet"></div>
+        <div id="comet">
+          <img src="" />
+        </div>
       </div>
     </div>
       
